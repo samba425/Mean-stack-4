@@ -1,0 +1,23 @@
+{
+  "name": "meanstack4",
+  "version": "1.0.0",
+  "description": "mean stack with angular4",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samba425/Mean-stack-4.git"
+  },
+  "author": "samba siva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samba425/Mean-stack-4/issues"
+  },
+  "homepage": "https://github.com/samba425/Mean-stack-4#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "mongoose": "^4.13.0"
+  }
+}
