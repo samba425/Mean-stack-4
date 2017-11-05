@@ -13,6 +13,7 @@ import { LoginComponent } from './components/login/login.component';
 import { ProfileComponent } from './components/profile/profile.component'; 
 import { FlashMessagesModule } from 'angular2-flash-messages'; 
 import { AuthGuard } from './services/auth.guard';
+import { BlogComponent } from './components/blog/blog.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AuthGuard } from './services/auth.guard';
     DashboardComponent,
     RegisterComponent,
     LoginComponent,
-    ProfileComponent
+    ProfileComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +37,8 @@ import { AuthGuard } from './services/auth.guard';
       { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
       { path: 'register', component: RegisterComponent },
       { path: 'login', component: LoginComponent },
-      { path: 'profile', component: ProfileComponent },
+      { path: 'profile', component: ProfileComponent,canActivate: [AuthGuard] },
+      { path: 'blog', component: BlogComponent,canActivate: [AuthGuard] },
       { path: '**', component: HomeComponent }
     ])
   ],

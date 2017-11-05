@@ -5,9 +5,10 @@ const mongoose = require('mongoose');
 const config = require('./config/database');
 const path = require('path');
 const cors = require('cors');
-const bodyparser = require('body-parser');
 
+const blogs = require('./routes/blogs')(router);
 const aunticate = require('./routes/aunticate')(router);
+const bodyparser = require('body-parser');
 
 mongoose.Promise = global.Promise;
 mongoose.connect(config.uri,(err) => {
@@ -22,9 +23,11 @@ app.use(cors({
 app.use(bodyparser.urlencoded({extended: false }));
 app.use(bodyparser.json());
 app.use(express.static(__dirname + '/client/dist/'));
-app.use('/auth', aunticate);
 
-app.get('/',(req,res) => {
+
+app.use('/auth', aunticate);
+app.use('/blogs', blogs);
+app.get('*',(req,res) => {
 	res.sendFile(path.join(__dirname + '/client/dist/index.html'));
 })
 
