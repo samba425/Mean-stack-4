@@ -6,9 +6,10 @@ const config = require('./config/database');
 const path = require('path');
 const cors = require('cors');
 
-const blogs = require('./routes/blogs')(router);
-const aunticate = require('./routes/aunticate')(router);
+
 const bodyparser = require('body-parser');
+const aunticate = require('./routes/aunticate')(router);
+const blogs = require('./routes/blogs')(router);
 
 mongoose.Promise = global.Promise;
 mongoose.connect(config.uri,(err) => {

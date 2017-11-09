@@ -24,9 +24,8 @@ const titlevalidators = [
 const blogSchema = new Schema({
 title : { type: String,required: true, validate: titlevalidators},
 body : { type: String,required: true},
-createdBy : { type: String},
-createdAt : { type: String},
-createdBy : { type: String,default: Date.now()},
+createdBy : { type: String}, 
+createdAt : { type: String,default: Date.now()},
 likes : { type: Number,default: 0 },
 likedBy : { type: Array },
 dislikes : { type: Number,default: 0  },

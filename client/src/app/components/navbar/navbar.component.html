@@ -20,7 +20,7 @@
             <li  *ngIf="!auth.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink='/register'>Register</a></li> 
             <li  *ngIf="auth.loggedIn()"  [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink='/profile'>Profile</a></li> 
             <li *ngIf="!auth.loggedIn()"  [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink='/login'>Login</a></li> 
-            <li  *ngIf="auth.loggedIn()" ><a (click)="logout()">Logout</a></li> 
+            <li  *ngIf="auth.loggedIn()" class="cursor"><a (click)="logout()">Logout</a></li> 
             <!--<li><a  >Contact</a></li> -->
           </ul>
         </div><!--/.nav-collapse -->

@@ -83,7 +83,7 @@ router.use((req,res,next) => {
 	} else{
 		jwt.verify(token,config.secret,(err,decode) => {
       if(err) {
-		res.json({success: false, message: "Inavlid token"});
+		res.json({success: false, message: "Invalid token"});
       } else {
       	req.decode = decode;
       	next();

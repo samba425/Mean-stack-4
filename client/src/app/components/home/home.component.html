@@ -2,8 +2,9 @@
   <h1>Mean Stack with Angular4</h1>
   <p>Welcome to My Page I <strong>Samba siva</strong></p>
 <div>
-  <a routerLink='/register' class="btn btn-primary">Register</a>
-  <a routerLink='/login' class="btn btn-default">Login</a>
+  <a *ngIf="!auth.loggedIn()" routerLink='/register' class="btn btn-primary">Register</a>
+  <a *ngIf="!auth.loggedIn()" routerLink='/login' class="btn btn-default">Login</a>
+  <a *ngIf="auth.loggedIn()" routerLink='/blog' class="btn btn-success">Blogs</a>
 </div>
 </div>
 
