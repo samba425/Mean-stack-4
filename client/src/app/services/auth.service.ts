@@ -7,7 +7,7 @@ import { tokenNotExpired } from 'angular2-jwt';
 export class AuthService {
 authtoken;
 options;
-dominurl = "http://localhost:5000";
+dominurl = "";
 
   constructor(private http: Http) { }
 
