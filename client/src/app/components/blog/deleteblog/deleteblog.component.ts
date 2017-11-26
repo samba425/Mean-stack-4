@@ -1,6 +1,6 @@
 
-import { BlogService } from './../../../services/blog.service';
 import { Component, OnInit } from '@angular/core'; 
+import { BlogService } from './../../../services/blog.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -17,14 +17,14 @@ blog;
   constructor(private blogService : BlogService,
               private activatedRoute : ActivatedRoute) { }
 
-  ngOnInit() { 
+  ngOnInit() {  
     this.currentUrl  = this.activatedRoute.snapshot.params; 
     console.log("delete url", this.currentUrl)
       this.blogService.getSingleBlog(this.currentUrl.id).subscribe(data => {
       if(!data.success) {
-this.messageClass = "alert alert-danger";
-this.message = data.message;
-      }  else {
+      this.messageClass = "alert alert-danger";
+      this.message = data.message;
+            }  else {
         this.blog = {
           title: data.blog.title,
           body: data.blog.body,

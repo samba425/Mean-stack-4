@@ -53,8 +53,8 @@
         <p><strong>Dislikes:</strong>{{ blog.dislikes }}</p>
       </div> 
       <a [routerLink]="['/edit-blog/',blog._id]" *ngIf="userName === blog.createdBy"><button type="button" name="button" class="btn btn-sm btn-info">Edit</button></a>
-      <a [routerLink]="['/delete/',blog._id]" *ngIf="userName === blog.createdBy"><button type="button" name="button" class="btn btn-sm btn-danger">Delete</button></a>
-       
+      <a [routerLink]="['/delete/',blog._id]"  *ngIf="userName === blog.createdBy"><button type="button" name="button" class="btn btn-sm btn-danger">Delete</button></a>
+      
       <div class="dropdown">
         <button type="button" name="button" class="btn btn-sm btn-success"  *ngIf="userName !== blog.createdBy">
           <span class="glyphicon glyphicon-thumbs-up">&nbsp;Likes: 25</span>

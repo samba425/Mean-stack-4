@@ -15,7 +15,7 @@ import { FlashMessagesModule } from 'angular2-flash-messages';
 import { AuthGuard } from './services/auth.guard';
 import { BlogService } from './services/blog.service';
 import { BlogComponent } from './components/blog/blog.component';
-import { EditblogComponent } from './components/blog/editblog/editblog.component';
+import { EditblogComponent } from './components/blog/editblog/editblog.component'; 
 import { DeleteblogComponent } from './components/blog/deleteblog/deleteblog.component';
 
 @NgModule({
@@ -46,7 +46,7 @@ import { DeleteblogComponent } from './components/blog/deleteblog/deleteblog.com
       { path: 'profile', component: ProfileComponent,canActivate: [AuthGuard] },
       { path: 'blog', component: BlogComponent,canActivate: [AuthGuard] },
       { path: 'edit-blog/:id', component: EditblogComponent,canActivate: [AuthGuard] },
-      {path: 'delete/:id',component: DeleteblogComponent,canActivate: [AuthGuard]},
+      { path: 'delete/:id', component: DeleteblogComponent,canActivate: [AuthGuard] },
       { path: '**', component: HomeComponent }
     ])
   ],

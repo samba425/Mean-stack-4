@@ -18,7 +18,7 @@
           placeholder="*Blog Body" class="form-control"
            [(ngModel)]="blogs.body"></textarea>
    </div>
-  <a [routerLink]="['/delete-blog',blogs._id]"><button type="button" class="btn btn-banger">Delete Blog</button> </a> 
+  <a [routerLink]="['/delete',blogs._id]"><button type="button" class="btn btn-banger">Delete Blog</button> </a> 
   <button type="button" class="btn btn-success" (click)="goBack()">Go Back</button>
   <button type="submit" class="btn btn-info" >Save</button>
 </form>
