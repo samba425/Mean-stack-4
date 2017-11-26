@@ -5,11 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/samba425/Mean-stack-4.git"
-  },
+  }, 
   "author": "samba siva",
   "license": "ISC",
   "bugs": {
